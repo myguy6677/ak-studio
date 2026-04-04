@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch — AK Studio</title>
+    <meta name="description" content="Start your project with AK Studio. Tell us about your business and we'll build something great.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">AK<span class="accent">.</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#about" class="stagger-hover" data-text="About">About</a>
+                <a href="index.html#work" class="stagger-hover" data-text="Work">Work</a>
+                <a href="index.html#process" class="stagger-hover" data-text="Process">Process</a>
+                <a href="index.html#services" class="stagger-hover" data-text="Services">Services</a>
+                <a href="index.html#pricing" class="stagger-hover" data-text="Pricing">Pricing</a>
+                <a href="contact.html" class="nav-cta">Get in Touch</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <div class="section-label">// Get in Touch</div>
+                <h1 class="section-title" id="contactScramble">Let's build something great.</h1>
+                <p class="contact-hero-sub">Fill out the form below and I'll get back to you within 24 hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <form class="contact-form-full" id="contactForm">
+
+                <!-- Step indicator -->
+                <div class="form-progress">
+                    <div class="form-progress-step active" data-step="1">
+                        <span class="progress-num">01</span>
+                        <span class="progress-label">You</span>
+                    </div>
+                    <div class="form-progress-line"></div>
+                    <div class="form-progress-step" data-step="2">
+                        <span class="progress-num">02</span>
+                        <span class="progress-label">Project</span>
+                    </div>
+                    <div class="form-progress-line"></div>
+                    <div class="form-progress-step" data-step="3">
+                        <span class="progress-num">03</span>
+                        <span class="progress-label">Details</span>
+                    </div>
+                    <div class="form-progress-line"></div>
+                    <div class="form-progress-step" data-step="4">
+                        <span class="progress-num">04</span>
+                        <span class="progress-label">Send</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: About You -->
+                <div class="form-step active" data-form-step="1">
+                    <div class="step-header">
+                        <span class="step-num">01.</span>
+                        <h2>About You</h2>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+370 600 00000">
+                        </div>
+                        <div class="form-field">
+                            <label for="company">Business / Company Name</label>
+                            <input type="text" id="company" name="company" placeholder="Your Business Name">
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="location">City / Location</label>
+                        <input type="text" id="location" name="location" placeholder="Vilnius, Lithuania">
+                    </div>
+
+                    <div class="form-nav">
+                        <div></div>
+                        <button type="button" class="btn btn-primary btn-next" data-next="2">Next <span class="btn-arrow">&rarr;</span></button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Your Project -->
+                <div class="form-step" data-form-step="2">
+                    <div class="step-header">
+                        <span class="step-num">02.</span>
+                        <h2>Your Project</h2>
+                    </div>
+
+                    <div class="form-field">
+                        <label>What type of project do you need? *</label>
+                        <div class="form-options">
+                            <label class="form-option">
+                                <input type="radio" name="project_type" value="new-website" required>
+                                <span class="option-box">
+                                    <span class="option-icon">01</span>
+                                    <span class="option-label">New Website</span>
+                                    <span class="option-desc">Built from scratch</span>
+                                </span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="project_type" value="redesign">
+                                <span class="option-box">
+                                    <span class="option-icon">02</span>
+                                    <span class="option-label">Redesign</span>
+                                    <span class="option-desc">Modernize existing site</span>
+                                </span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="project_type" value="landing-page">
+                                <span class="option-box">
+                                    <span class="option-icon">03</span>
+                                    <span class="option-label">Landing Page</span>
+                                    <span class="option-desc">Single focused page</span>
+                                </span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="project_type" value="other">
+                                <span class="option-box">
+                                    <span class="option-icon">04</span>
+                                    <span class="option-label">Other</span>
+                                    <span class="option-desc">Something custom</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label>What industry is your business in? *</label>
+                        <div class="form-options small">
+                            <label class="form-option mini">
+                                <input type="radio" name="industry" value="restaurant" required>
+                                <span class="option-pill">Restaurant / Cafe</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="industry" value="beauty">
+                                <span class="option-pill">Beauty / Salon</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="industry" value="tattoo">
+                                <span class="option-pill">Tattoo Studio</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="industry" value="fitness">
+                                <span class="option-pill">Fitness / Gym</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="industry" value="retail">
+                                <span class="option-pill">Retail / Shop</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="industry" value="services">
+                                <span class="option-pill">Professional Services</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="industry" value="healthcare">
+                                <span class="option-pill">Healthcare / Medical</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="industry" value="other">
+                                <span class="option-pill">Other</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="current_site">Do you have an existing website? If so, what's the URL?</label>
+                        <input type="url" id="current_site" name="current_site" placeholder="https://yoursite.com">
+                    </div>
+
+                    <div class="form-nav">
+                        <button type="button" class="btn btn-ghost btn-prev" data-prev="1"><span class="btn-arrow">&larr;</span> Back</button>
+                        <button type="button" class="btn btn-primary btn-next" data-next="3">Next <span class="btn-arrow">&rarr;</span></button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Project Details -->
+                <div class="form-step" data-form-step="3">
+                    <div class="step-header">
+                        <span class="step-num">03.</span>
+                        <h2>Project Details</h2>
+                    </div>
+
+                    <div class="form-field">
+                        <label>How many pages do you need?</label>
+                        <div class="form-options small">
+                            <label class="form-option mini">
+                                <input type="radio" name="pages" value="1">
+                                <span class="option-pill">Just 1</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="pages" value="2-5">
+                                <span class="option-pill">2 - 5</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="pages" value="5-10">
+                                <span class="option-pill">5 - 10</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="pages" value="10+">
+                                <span class="option-pill">10+</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="pages" value="not-sure">
+                                <span class="option-pill">Not Sure</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label>What features do you need? (select all that apply)</label>
+                        <div class="form-options small">
+                            <label class="form-option mini">
+                                <input type="checkbox" name="features" value="contact-form">
+                                <span class="option-pill">Contact Form</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="checkbox" name="features" value="photo-gallery">
+                                <span class="option-pill">Photo Gallery</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="checkbox" name="features" value="menu">
+                                <span class="option-pill">Menu / Price List</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="checkbox" name="features" value="booking">
+                                <span class="option-pill">Online Booking</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="checkbox" name="features" value="maps">
+                                <span class="option-pill">Google Maps</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="checkbox" name="features" value="social">
+                                <span class="option-pill">Social Media Links</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="checkbox" name="features" value="animations">
+                                <span class="option-pill">Animations</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="checkbox" name="features" value="seo">
+                                <span class="option-pill">SEO Optimization</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="checkbox" name="features" value="cms">
+                                <span class="option-pill">Content Management</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="checkbox" name="features" value="multilingual">
+                                <span class="option-pill">Multi-language</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label>What's your budget range?</label>
+                        <div class="form-options small">
+                            <label class="form-option mini">
+                                <input type="radio" name="budget" value="under-200">
+                                <span class="option-pill">Under $200</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="budget" value="200-500">
+                                <span class="option-pill">$200 - $500</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="budget" value="500-800">
+                                <span class="option-pill">$500 - $800</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="budget" value="800+">
+                                <span class="option-pill">$800+</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="budget" value="flexible">
+                                <span class="option-pill">Flexible</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label>When do you need this done?</label>
+                        <div class="form-options small">
+                            <label class="form-option mini">
+                                <input type="radio" name="timeline" value="asap">
+                                <span class="option-pill">ASAP</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="timeline" value="1-2-weeks">
+                                <span class="option-pill">1 - 2 Weeks</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="timeline" value="1-month">
+                                <span class="option-pill">Within a Month</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="timeline" value="no-rush">
+                                <span class="option-pill">No Rush</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-nav">
+                        <button type="button" class="btn btn-ghost btn-prev" data-prev="2"><span class="btn-arrow">&larr;</span> Back</button>
+                        <button type="button" class="btn btn-primary btn-next" data-next="4">Next <span class="btn-arrow">&rarr;</span></button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Final Details -->
+                <div class="form-step" data-form-step="4">
+                    <div class="step-header">
+                        <span class="step-num">04.</span>
+                        <h2>Almost Done</h2>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="description">Describe your project in a few sentences *</label>
+                        <textarea id="description" name="description" rows="4" required placeholder="Tell me about your business, what you want the website to achieve, any specific ideas you have..."></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="inspiration">Any websites you like or want yours to look similar to?</label>
+                        <textarea id="inspiration" name="inspiration" rows="3" placeholder="Paste links or describe the style you're going for..."></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="extras">Anything else I should know?</label>
+                        <textarea id="extras" name="extras" rows="3" placeholder="Special requests, content you already have, domain info, etc."></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <label>How did you find me?</label>
+                        <div class="form-options small">
+                            <label class="form-option mini">
+                                <input type="radio" name="referral" value="google">
+                                <span class="option-pill">Google</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="referral" value="social">
+                                <span class="option-pill">Social Media</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="referral" value="referral">
+                                <span class="option-pill">Referral</span>
+                            </label>
+                            <label class="form-option mini">
+                                <input type="radio" name="referral" value="other">
+                                <span class="option-pill">Other</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-nav">
+                        <button type="button" class="btn btn-ghost btn-prev" data-prev="3"><span class="btn-arrow">&larr;</span> Back</button>
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message <span class="btn-arrow">&rarr;</span></button>
+                    </div>
+                </div>
+
+                <!-- Success State -->
+                <div class="form-success" id="formSuccess">
+                    <div class="success-icon">&gt;_</div>
+                    <h2 class="success-title">Message Sent.</h2>
+                    <p class="success-text">I'll review your project details and get back to you within 24 hours.</p>
+                    <a href="index.html" class="btn btn-ghost">Back to Home</a>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-logo">AK<span class="accent">.</span></span>
+                <span class="footer-copy">&copy; 2026 AK Studio</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

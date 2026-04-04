@@ -1,0 +1,374 @@
+/* ============================================
+   AK Studio — Contact Page
+   ============================================ */
+
+/* --- Contact Hero --- */
+.contact-hero {
+    padding-top: 160px;
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero-content {
+    max-width: 600px;
+}
+
+.contact-hero-content .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 16px;
+}
+
+.contact-hero-sub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* --- Form Section --- */
+.contact-form-section {
+    padding: 40px 0 120px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-form-full {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Progress Bar --- */
+.form-progress {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 64px;
+    padding: 0 20px;
+}
+
+.form-progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.25;
+    transition: opacity 0.4s ease;
+    flex-shrink: 0;
+}
+
+.form-progress-step.active {
+    opacity: 1;
+}
+
+.form-progress-step.completed {
+    opacity: 0.6;
+}
+
+.progress-num {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.form-progress-step.active .progress-num {
+    text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.progress-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+.form-progress-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+    margin: 0 16px;
+    margin-bottom: 20px;
+}
+
+/* --- Form Steps --- */
+.form-step {
+    display: none;
+    animation: stepFadeIn 0.5s ease forwards;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes stepFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.step-num {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    opacity: 0.3;
+}
+
+.step-header h2 {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* --- Form Fields --- */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-field {
+    margin-bottom: 32px;
+}
+
+.form-field label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 14px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    line-height: 1.6;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-bottom-color: var(--accent);
+    box-shadow: 0 1px 0 var(--accent);
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* --- Option Boxes (project type) --- */
+.form-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.form-options.small {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.form-option {
+    cursor: pointer;
+}
+
+.form-option input {
+    display: none;
+}
+
+.option-box {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-option input:checked + .option-box {
+    border-color: var(--accent);
+    background: rgba(0, 255, 65, 0.04);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.08);
+}
+
+.option-icon {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    opacity: 0.2;
+    margin-bottom: 12px;
+    transition: opacity 0.3s ease;
+}
+
+.form-option input:checked + .option-box .option-icon {
+    opacity: 0.6;
+}
+
+.option-label {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.option-desc {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* --- Option Pills (smaller selections) --- */
+.option-pill {
+    display: block;
+    padding: 10px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.option-pill:hover {
+    border-color: rgba(0, 255, 65, 0.3);
+    color: var(--text);
+}
+
+.form-option input:checked + .option-pill {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0, 255, 65, 0.06);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.08);
+}
+
+/* --- Form Navigation --- */
+.form-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+}
+
+.btn-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin: 0 4px;
+}
+
+.btn-next:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+.btn-prev:hover .btn-arrow {
+    transform: translateX(-4px);
+}
+
+/* --- Success State --- */
+.form-success {
+    display: none;
+    text-align: center;
+    padding: 80px 0;
+    animation: stepFadeIn 0.6s ease forwards;
+}
+
+.form-success.active {
+    display: block;
+}
+
+.success-icon {
+    font-family: var(--font-mono);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-shadow: 0 0 30px var(--accent-glow);
+    margin-bottom: 24px;
+}
+
+.success-title {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.success-text {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-options {
+        grid-template-columns: 1fr;
+    }
+
+    .form-options.small {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-progress {
+        padding: 0;
+    }
+
+    .progress-label {
+        display: none;
+    }
+
+    .form-progress-line {
+        margin: 0 8px;
+        margin-bottom: 0;
+    }
+
+    .contact-hero {
+        padding-top: 120px;
+    }
+
+    .step-header h2 {
+        font-size: 1.2rem;
+    }
+}
