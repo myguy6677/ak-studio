@@ -1050,8 +1050,18 @@ img { max-width: 100%; display: block; }
     }
 
     .nav-links a {
-        font-size: 1.2rem;
-        color: var(--text);
+        font-size: 1.4rem;
+        color: #e0e0e0 !important;
+        opacity: 1 !important;
+    }
+
+    .nav-links a .char-span {
+        color: #e0e0e0 !important;
+    }
+
+    .nav-cta {
+        margin-top: 16px;
+        font-size: 1rem !important;
     }
 }
 
