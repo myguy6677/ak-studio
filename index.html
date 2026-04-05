@@ -20,13 +20,14 @@
         <div class="container">
             <a href="#" class="nav-logo">AK<span class="accent">.</span></a>
             <div class="nav-links" id="navLinks">
-                <a href="#about" class="stagger-hover" data-text="About">About</a>
-                <a href="#work" class="stagger-hover" data-text="Work">Work</a>
-                <a href="#process" class="stagger-hover" data-text="Process">Process</a>
-                <a href="#services" class="stagger-hover" data-text="Services">Services</a>
-                <a href="#pricing" class="stagger-hover" data-text="Pricing">Pricing</a>
-                <a href="contact.html" class="nav-cta">Get in Touch</a>
+                <a href="#about" class="stagger-hover" data-text="About" data-i18n="nav.about">About</a>
+                <a href="#work" class="stagger-hover" data-text="Work" data-i18n="nav.work">Work</a>
+                <a href="#process" class="stagger-hover" data-text="Process" data-i18n="nav.process">Process</a>
+                <a href="#services" class="stagger-hover" data-text="Services" data-i18n="nav.services">Services</a>
+                <a href="#pricing" class="stagger-hover" data-text="Pricing" data-i18n="nav.pricing">Pricing</a>
+                <a href="contact.html" class="nav-cta" data-i18n="nav.cta">Get in Touch</a>
             </div>
+            <button class="lang-toggle" aria-label="Toggle language">LT</button>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -38,12 +39,12 @@
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-tag">// Web Design & Development</div>
+                <div class="hero-tag" data-i18n="hero.tag">// Web Design & Development</div>
                 <h1 class="hero-title" id="heroScramble"></h1>
-                <p class="hero-sub">Premium web experiences with clean animations — built to convert visitors into customers.</p>
+                <p class="hero-sub" data-i18n="hero.sub">Premium web experiences with clean animations — built to convert visitors into customers.</p>
                 <div class="hero-actions">
-                    <a href="#work" class="btn btn-primary">See My Work</a>
-                    <a href="contact.html" class="btn btn-ghost">Start a Project</a>
+                    <a href="#work" class="btn btn-primary" data-i18n="hero.btn.work">See My Work</a>
+                    <a href="contact.html" class="btn btn-ghost" data-i18n="hero.btn.start">Start a Project</a>
                 </div>
             </div>
         </div>
@@ -52,25 +53,25 @@
     <!-- About -->
     <section class="section about" id="about">
         <div class="container">
-            <div class="section-label">// About</div>
+            <div class="section-label" data-i18n="about.label">// About</div>
             <div class="about-grid">
                 <div class="about-text">
-                    <h2 class="section-title scramble-on-scroll">I build websites that businesses are proud to show off.</h2>
-                    <p>I'm Arminas — a web developer who uses AI-powered workflows to deliver high-quality sites faster and at a fraction of the usual cost.</p>
-                    <p>Every project gets the same treatment: clean code, polished animations, and a design that actually represents your business.</p>
+                    <h2 class="section-title scramble-on-scroll" data-i18n="about.title">I build websites that businesses are proud to show off.</h2>
+                    <p data-i18n="about.p1">I'm Arminas — a web developer who uses AI-powered workflows to deliver high-quality sites faster and at a fraction of the usual cost.</p>
+                    <p data-i18n="about.p2">Every project gets the same treatment: clean code, polished animations, and a design that actually represents your business.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat">
                         <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
-                        <span class="stat-label">Custom Built</span>
+                        <span class="stat-label" data-i18n="about.stat1">Custom Built</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number" data-count="48">0</span><span class="stat-suffix">hr</span>
-                        <span class="stat-label">Avg. Delivery</span>
+                        <span class="stat-label" data-i18n="about.stat2">Avg. Delivery</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number" data-count="0">0</span><span class="stat-suffix"></span>
-                        <span class="stat-label">Templates Used</span>
+                        <span class="stat-label" data-i18n="about.stat3">Templates Used</span>
                     </div>
                 </div>
             </div>
@@ -80,8 +81,8 @@
     <!-- Work / Portfolio -->
     <section class="section work" id="work">
         <div class="container">
-            <div class="section-label">// Work</div>
-            <h2 class="section-title scramble-on-scroll">Selected Projects</h2>
+            <div class="section-label" data-i18n="work.label">// Work</div>
+            <h2 class="section-title scramble-on-scroll" data-i18n="work.title">Selected Projects</h2>
             <div class="work-grid">
 
                 <a href="https://gintaras-tattoo.pages.dev" target="_blank" class="glow-card" data-glow data-project="gintaras">
@@ -91,7 +92,7 @@
                             <span>Gintaras Tattoo</span>
                         </div>
                         <div class="work-card-overlay">
-                            <span class="work-card-view">View Project <span class="view-arrow">&rarr;</span></span>
+                            <span class="work-card-view" data-i18n="work.view">View Project <span class="view-arrow">&rarr;</span></span>
                         </div>
                     </div>
                     <div class="work-card-info">
@@ -107,7 +108,7 @@
                             <span>Karamba Bamba</span>
                         </div>
                         <div class="work-card-overlay">
-                            <span class="work-card-view">View Project <span class="view-arrow">&rarr;</span></span>
+                            <span class="work-card-view" data-i18n="work.view">View Project <span class="view-arrow">&rarr;</span></span>
                         </div>
                     </div>
                     <div class="work-card-info">
@@ -123,7 +124,7 @@
                             <span>Privilege Tattoo</span>
                         </div>
                         <div class="work-card-overlay">
-                            <span class="work-card-view">View Project <span class="view-arrow">&rarr;</span></span>
+                            <span class="work-card-view" data-i18n="work.view">View Project <span class="view-arrow">&rarr;</span></span>
                         </div>
                     </div>
                     <div class="work-card-info">
@@ -141,9 +142,9 @@
         <div class="container">
             <div class="process-wrapper">
                 <div class="process-left">
-                    <div class="section-label">// Process</div>
-                    <h2 class="section-title">How I Work</h2>
-                    <p class="process-desc">A clear, structured workflow from first message to launch day.</p>
+                    <div class="section-label" data-i18n="process.label">// Process</div>
+                    <h2 class="section-title" data-i18n="process.title">How I Work</h2>
+                    <p class="process-desc" data-i18n="process.desc">A clear, structured workflow from first message to launch day.</p>
                     <div class="process-progress">
                         <div class="process-progress-fill" id="processProgressFill"></div>
                     </div>
@@ -152,38 +153,38 @@
                     <div class="process-steps">
                         <div class="process-step" data-step="1">
                             <div class="step-number">01.</div>
-                            <h3 class="step-title">Discovery</h3>
+                            <h3 class="step-title" data-i18n="process.step1.title">Discovery</h3>
                             <ul class="step-list">
-                                <li>Understand your business and goals</li>
-                                <li>Review competitors and inspiration</li>
-                                <li>Define scope and timeline</li>
+                                <li data-i18n="process.step1.li1">Understand your business and goals</li>
+                                <li data-i18n="process.step1.li2">Review competitors and inspiration</li>
+                                <li data-i18n="process.step1.li3">Define scope and timeline</li>
                             </ul>
                         </div>
                         <div class="process-step" data-step="2">
                             <div class="step-number">02.</div>
-                            <h3 class="step-title">Design</h3>
+                            <h3 class="step-title" data-i18n="process.step2.title">Design</h3>
                             <ul class="step-list">
-                                <li>Visual direction and color palette</li>
-                                <li>Layout and wireframe structure</li>
-                                <li>Animation planning</li>
+                                <li data-i18n="process.step2.li1">Visual direction and color palette</li>
+                                <li data-i18n="process.step2.li2">Layout and wireframe structure</li>
+                                <li data-i18n="process.step2.li3">Animation planning</li>
                             </ul>
                         </div>
                         <div class="process-step" data-step="3">
                             <div class="step-number">03.</div>
-                            <h3 class="step-title">Development</h3>
+                            <h3 class="step-title" data-i18n="process.step3.title">Development</h3>
                             <ul class="step-list">
-                                <li>Clean, hand-coded build</li>
-                                <li>Mobile-first responsive design</li>
-                                <li>Smooth scroll animations</li>
+                                <li data-i18n="process.step3.li1">Clean, hand-coded build</li>
+                                <li data-i18n="process.step3.li2">Mobile-first responsive design</li>
+                                <li data-i18n="process.step3.li3">Smooth scroll animations</li>
                             </ul>
                         </div>
                         <div class="process-step" data-step="4">
                             <div class="step-number">04.</div>
-                            <h3 class="step-title">Launch</h3>
+                            <h3 class="step-title" data-i18n="process.step4.title">Launch</h3>
                             <ul class="step-list">
-                                <li>Performance optimization</li>
-                                <li>Domain setup and deployment</li>
-                                <li>Handoff and support</li>
+                                <li data-i18n="process.step4.li1">Performance optimization</li>
+                                <li data-i18n="process.step4.li2">Domain setup and deployment</li>
+                                <li data-i18n="process.step4.li3">Handoff and support</li>
                             </ul>
                         </div>
                     </div>
@@ -195,46 +196,46 @@
     <!-- Services -->
     <section class="section services" id="services">
         <div class="container">
-            <div class="section-label">// Services</div>
-            <h2 class="section-title scramble-on-scroll">What I Do</h2>
+            <div class="section-label" data-i18n="services.label">// Services</div>
+            <h2 class="section-title scramble-on-scroll" data-i18n="services.title">What I Do</h2>
             <div class="services-grid">
 
                 <div class="glow-card service-glow" data-glow>
                     <div class="glow-card-inner" data-glow></div>
                     <div class="service-number">01</div>
-                    <h3>Full Website Builds</h3>
-                    <p>Complete websites from scratch — designed, coded, and deployed.</p>
+                    <h3 data-i18n="services.s1.title">Full Website Builds</h3>
+                    <p data-i18n="services.s1.desc">Complete websites from scratch — designed, coded, and deployed.</p>
                     <ul class="service-list">
-                        <li>Custom design tailored to your brand</li>
-                        <li>Mobile-first responsive layout</li>
-                        <li>Smooth scroll animations</li>
-                        <li>SEO optimized & fast-loading</li>
+                        <li data-i18n="services.s1.li1">Custom design tailored to your brand</li>
+                        <li data-i18n="services.s1.li2">Mobile-first responsive layout</li>
+                        <li data-i18n="services.s1.li3">Smooth scroll animations</li>
+                        <li data-i18n="services.s1.li4">SEO optimized & fast-loading</li>
                     </ul>
                 </div>
 
                 <div class="glow-card service-glow" data-glow>
                     <div class="glow-card-inner" data-glow></div>
                     <div class="service-number">02</div>
-                    <h3>Redesigns</h3>
-                    <p>Outdated site? I'll rebuild it with a modern look and better performance.</p>
+                    <h3 data-i18n="services.s2.title">Redesigns</h3>
+                    <p data-i18n="services.s2.desc">Outdated site? I'll rebuild it with a modern look and better performance.</p>
                     <ul class="service-list">
-                        <li>Modern visual overhaul</li>
-                        <li>Improved speed & performance</li>
-                        <li>Clean animation upgrades</li>
-                        <li>Keep what works, fix what doesn't</li>
+                        <li data-i18n="services.s2.li1">Modern visual overhaul</li>
+                        <li data-i18n="services.s2.li2">Improved speed & performance</li>
+                        <li data-i18n="services.s2.li3">Clean animation upgrades</li>
+                        <li data-i18n="services.s2.li4">Keep what works, fix what doesn't</li>
                     </ul>
                 </div>
 
                 <div class="glow-card service-glow" data-glow>
                     <div class="glow-card-inner" data-glow></div>
                     <div class="service-number">03</div>
-                    <h3>Landing Pages</h3>
-                    <p>Single-page builds that get straight to the point.</p>
+                    <h3 data-i18n="services.s3.title">Landing Pages</h3>
+                    <p data-i18n="services.s3.desc">Single-page builds that get straight to the point.</p>
                     <ul class="service-list">
-                        <li>One focused page, zero fluff</li>
-                        <li>Contact forms & call-to-actions</li>
-                        <li>Perfect for launches & promotions</li>
-                        <li>Live in under 48 hours</li>
+                        <li data-i18n="services.s3.li1">One focused page, zero fluff</li>
+                        <li data-i18n="services.s3.li2">Contact forms & call-to-actions</li>
+                        <li data-i18n="services.s3.li3">Perfect for launches & promotions</li>
+                        <li data-i18n="services.s3.li4">Live in under 48 hours</li>
                     </ul>
                 </div>
 
@@ -245,53 +246,53 @@
     <!-- Pricing -->
     <section class="section pricing" id="pricing">
         <div class="container">
-            <div class="section-label">// Pricing</div>
-            <h2 class="section-title scramble-on-scroll">Transparent Pricing</h2>
-            <p class="section-sub">No hidden fees. No hourly billing. Just a flat rate for a finished product.</p>
+            <div class="section-label" data-i18n="pricing.label">// Pricing</div>
+            <h2 class="section-title scramble-on-scroll" data-i18n="pricing.title">Transparent Pricing</h2>
+            <p class="section-sub" data-i18n="pricing.sub">No hidden fees. No hourly billing. Just a flat rate for a finished product.</p>
             <div class="pricing-grid">
 
                 <div class="glow-card pricing-glow" data-glow>
                     <div class="glow-card-inner" data-glow></div>
-                    <div class="pricing-tier">Starter</div>
+                    <div class="pricing-tier" data-i18n="pricing.starter">Starter</div>
                     <div class="pricing-price">$200</div>
                     <ul class="pricing-features">
-                        <li>Single landing page</li>
-                        <li>Mobile responsive</li>
-                        <li>Basic animations</li>
-                        <li>Contact form</li>
-                        <li>1 round of revisions</li>
+                        <li data-i18n="pricing.s.li1">Single landing page</li>
+                        <li data-i18n="pricing.s.li2">Mobile responsive</li>
+                        <li data-i18n="pricing.s.li3">Basic animations</li>
+                        <li data-i18n="pricing.s.li4">Contact form</li>
+                        <li data-i18n="pricing.s.li5">1 round of revisions</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-ghost btn-full">Get Started</a>
+                    <a href="contact.html" class="btn btn-ghost btn-full" data-i18n="pricing.btn">Get Started</a>
                 </div>
 
                 <div class="glow-card pricing-glow featured" data-glow>
                     <div class="glow-card-inner" data-glow></div>
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-tier">Professional</div>
+                    <div class="pricing-badge" data-i18n="pricing.badge">Most Popular</div>
+                    <div class="pricing-tier" data-i18n="pricing.professional">Professional</div>
                     <div class="pricing-price">$500</div>
                     <ul class="pricing-features">
-                        <li>Multi-page website</li>
-                        <li>Custom animations</li>
-                        <li>SEO optimized</li>
-                        <li>Contact form + maps</li>
-                        <li>Social media links</li>
-                        <li>3 rounds of revisions</li>
+                        <li data-i18n="pricing.p.li1">Multi-page website</li>
+                        <li data-i18n="pricing.p.li2">Custom animations</li>
+                        <li data-i18n="pricing.p.li3">SEO optimized</li>
+                        <li data-i18n="pricing.p.li4">Contact form + maps</li>
+                        <li data-i18n="pricing.p.li5">Social media links</li>
+                        <li data-i18n="pricing.p.li6">3 rounds of revisions</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
+                    <a href="contact.html" class="btn btn-primary btn-full" data-i18n="pricing.btn">Get Started</a>
                 </div>
 
                 <div class="glow-card pricing-glow" data-glow>
                     <div class="glow-card-inner" data-glow></div>
-                    <div class="pricing-tier">Premium</div>
+                    <div class="pricing-tier" data-i18n="pricing.premium">Premium</div>
                     <div class="pricing-price">$800</div>
                     <ul class="pricing-features">
-                        <li>Everything in Professional</li>
-                        <li>Advanced scroll animations</li>
-                        <li>CMS / content management</li>
-                        <li>Performance optimization</li>
-                        <li>Unlimited revisions</li>
+                        <li data-i18n="pricing.pr.li1">Everything in Professional</li>
+                        <li data-i18n="pricing.pr.li2">Advanced scroll animations</li>
+                        <li data-i18n="pricing.pr.li3">CMS / content management</li>
+                        <li data-i18n="pricing.pr.li4">Performance optimization</li>
+                        <li data-i18n="pricing.pr.li5">Unlimited revisions</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-ghost btn-full">Get Started</a>
+                    <a href="contact.html" class="btn btn-ghost btn-full" data-i18n="pricing.btn">Get Started</a>
                 </div>
 
             </div>
@@ -302,10 +303,10 @@
     <section class="section cta-section">
         <div class="container">
             <div class="cta-block">
-                <div class="section-label">// Ready?</div>
-                <h2 class="section-title scramble-on-scroll">Let's build something great.</h2>
-                <p class="cta-text">Tell me about your project and I'll get back to you within 24 hours.</p>
-                <a href="contact.html" class="btn btn-primary">Start a Project <span class="btn-arrow">&rarr;</span></a>
+                <div class="section-label" data-i18n="cta.label">// Ready?</div>
+                <h2 class="section-title scramble-on-scroll" data-i18n="cta.title">Let's build something great.</h2>
+                <p class="cta-text" data-i18n="cta.text">Tell me about your project and I'll get back to you within 24 hours.</p>
+                <a href="contact.html" class="btn btn-primary" data-i18n="cta.btn">Start a Project <span class="btn-arrow">&rarr;</span></a>
             </div>
         </div>
     </section>
@@ -315,7 +316,7 @@
         <div class="container">
             <div class="footer-inner">
                 <span class="footer-logo">AK<span class="accent">.</span></span>
-                <span class="footer-copy">&copy; 2026 AK Studio</span>
+                <span class="footer-copy" data-i18n="footer.copy">&copy; 2026 AK Studio</span>
             </div>
         </div>
     </footer>
@@ -323,6 +324,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="js/lang.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

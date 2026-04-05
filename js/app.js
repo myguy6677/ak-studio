@@ -168,19 +168,26 @@ function initHeroScramble() {
     if (!el) return;
 
     const scrambler = new TextScramble(el);
-    const phrases = [
+
+    // Default EN phrases; lang.js may override via window.heroScramblePhrases
+    window.heroScramblePhrases = [
         'Websites that move people.',
         'Clean code. Sharp design.',
         'Built different.',
         'AK Studio.'
     ];
 
+    // If LT was saved, use LT phrases immediately
+    if (localStorage.getItem('ak-lang') === 'lt' && typeof translations !== 'undefined') {
+        window.heroScramblePhrases = translations.lt['hero.phrases'];
+    }
+
     let counter = 0;
     function next() {
-        scrambler.setText(phrases[counter]).then(() => {
+        scrambler.setText(window.heroScramblePhrases[counter]).then(() => {
             setTimeout(next, 2500);
         });
-        counter = (counter + 1) % phrases.length;
+        counter = (counter + 1) % window.heroScramblePhrases.length;
     }
 
     // Start after hero entrance animation
