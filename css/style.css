@@ -1030,9 +1030,17 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) {
     .nav-toggle { display: flex; }
 
+    .nav {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
     .nav-links {
         position: fixed;
-        inset: 0;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
         background: rgba(10, 10, 10, 0.98);
         flex-direction: column;
         align-items: center;
@@ -1042,6 +1050,9 @@ img { max-width: 100%; display: block; }
         pointer-events: none;
         transition: opacity 0.3s ease;
         z-index: 100;
+        margin: 0;
+        padding: 0;
+        margin-left: 0;
     }
 
     .nav-links.open {
@@ -1061,7 +1072,8 @@ img { max-width: 100%; display: block; }
 
     .nav-cta {
         margin-top: 16px;
-        font-size: 1rem !important;
+        font-size: 1.2rem !important;
+        padding: 14px 36px !important;
     }
 }
 
