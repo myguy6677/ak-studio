@@ -213,6 +213,9 @@ function collectEnDefaults() {
         const key = el.getAttribute('data-i18n');
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
             enDefaults[key] = el.placeholder;
+        } else if (el.classList.contains('btn')) {
+            const btnText = el.querySelector('.btn-text');
+            enDefaults[key] = btnText ? btnText.innerHTML : el.innerHTML;
         } else {
             enDefaults[key] = el.innerHTML;
         }
@@ -237,6 +240,14 @@ function applyLang(lang) {
 
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
             el.placeholder = value;
+        } else if (el.classList.contains('btn') || el.closest('.btn') === el) {
+            // Buttons have rain canvas + btn-text wrapper from initMatrixButtons
+            const btnText = el.querySelector('.btn-text');
+            if (btnText) {
+                btnText.innerHTML = value;
+            } else {
+                el.innerHTML = value;
+            }
         } else {
             el.innerHTML = value;
         }
@@ -268,7 +279,15 @@ function applyLang(lang) {
 }
 
 function initLangToggle() {
-    collectEnDefaults();
+    // Collect defaults after a short delay to let app.js initMatrixButtons wrap buttons
+    setTimeout(() => {
+        collectEnDefaults();
+
+        // Apply saved language
+        if (currentLang === 'lt') {
+            applyLang('lt');
+        }
+    }, 50);
 
     document.querySelectorAll('.lang-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -276,11 +295,6 @@ function initLangToggle() {
             applyLang(newLang);
         });
     });
-
-    // Apply saved language
-    if (currentLang === 'lt') {
-        applyLang('lt');
-    }
 }
 
 document.addEventListener('DOMContentLoaded', initLangToggle);
